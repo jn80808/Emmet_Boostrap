@@ -1,0 +1,14 @@
+{
+    "html": {
+      "snippets": {
+        "headsss":"h1#main-heading.heading{helloword} : h1 #id nameofid .class {hello world}",
+        "nesting1": "div>ul>li{list-itim 1 }"
+      }
+    },
+    "css": {
+      "snippets": {
+
+      }
+    }
+  }
+  
