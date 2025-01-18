@@ -1,0 +1,172 @@
+
+<!-- link : https://www.youtube.com/watch?v=hhIDcq-nrBI -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- all link and meta should be inside of the meta  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="joy ng" content="html">
+    <meta name="author" content="Joy Ng" >
+    <!-- met is use for search engine optimizer (SEO) is pag gusto yung searchable ang iindex ni google is yung description, keyword, author  -->
+    <!-- another important meta is meta Responsive Web Design - The Viewport seach lang yan pero ito yung link : https://www.w3schools.com/css/css_rwd_viewport.asp  -->
+    <!-- yung use ng meta viewport is kung ano yung width or scale ng user is mag addjust sya dun and dun sya isscale yurn para mabasa natin yung loob  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi</title>
+    <link rel="icon" href="/img/DD1-removebg-preview.png" type="image/x-icon">
+    <!-- Link remover background : https://www.remove.bg/ -->
+<body>
+
+    <p><strong>Lorem ipsum dolor sit</strong>Lorem ipsum dolor sit consectetur consectetur adipisicing elit. <br>
+        <em>placeat ametplaceat amet, voluptates,odio ap</em><br>
+        <mark>laudantium suscipit tempora quos</mark> <br>
+        <span>cum necessitatibus odit ut aut </span>
+        <s>illo perferendis quo. </s><br>
+    </p>
+
+    <p> <sub> Lorem ipsum dolor sit amet consectetur </sub> adipisicing elit. <br> <!-- for subtitle -->
+        <sup>Culpa nostrum non eos recusandae sed</sup> vero corporis dolores <br> <!-- for exponet  -->
+         x<sup>2</sup>  <br> <!-- for exponet  -->
+        <a href="google.com">neque tempore quasi? Sunt quaerat debitis </a> labore reprehenderit <br>
+    </p>
+
+    <!-- list -->
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+
+    <br>
+
+    <ol>
+        <li class="">List 1</li>
+        <li class="">List 2</li>
+        <li class="">List 3</li>
+        <li class="">List 4</li>
+        <li class="">List 5</li>
+    </ol>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr>
+            <td>John Doe</td>
+            <td>jjjj@com</td>
+            <td>44</td>
+         </tr>
+        </tbody>   
+    </table>
+
+    <br>
+    <br>
+
+    <!-- Forms -->
+
+    <!--
+    action: pag sinumbmit mo yung form dun sya pupunta for example here use the process.php means sya yung nag proprocess ng form 
+    method: default Post : especially pag nag uupdate ng data sa database 
+    enctype: pano encrypt yung data common use is application/x-www-form-urlencoded
+
+    -->
+    <br>
+    <hr>
+    <br>
+    <form action="process.php" method="POST" enctype="application/x-www-form-urlencoded">
+        <div>
+            <label > First Name</label>
+            <input type="text" name="FistName" id="firtName" placeholder="FirtsName" required> <!-- text is default , name ito naman yung icacary over nya sa database means ito yung hahanapin nya  || id for javascript para ito yung matarget nya -->      
+        </div>
+        <br>
+        <div>
+            <label> LastName</label>
+            <input type="text" name="LastName" id="lastName">
+        </div>
+        <br>
+        <div>
+            <label> Email</label>
+            <input type="email" name="Email" id="email">
+        </div>
+        <br>
+        <div>
+            <label> Password</label>
+            <input type="password" name="Password" id="email">
+        </div>
+        <br>
+        <div>
+            <label> Date</label>
+            <input type="date" name="Date" id="date">
+        </div>
+        <br>
+        <div>
+            <label> Time </label>
+            <input type="time" name="time" id="time">
+        </div>
+        <br>
+        <div>
+            <label> colorPicker </label>
+            <input type="color" name="colorpicker" id="colorpicker">
+        </div>
+        <br>
+        <div>
+            <label> Message </label>
+            <textarea rows="5" cols="10" name="message" id="message" placeholder="Put Youe Comments here">  </textarea>
+        </div>
+        <br>
+        <div>
+            <label> Gender </label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Male</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label> FileUpload</label>
+            <input type="file" name="file" id="file" accept="image/*"> <!--accept: means pwede natin ilimit is yung for image lang or pdf and so on -->
+            <input type="file" name="file" id="file" accept="image/" multiple> <!-- multiple means can add multiple files -->
+        </div>
+        <br>
+        <div>
+            <input type="submit" name="submit" value="Submit Form">
+            <button type="submit" name="submit" value="Submit Form" > submit</button>
+        </div>
+    </form>
+
+</body>
+    <br>
+    <!--Image-->
+    <a href="/img/DD1-removebg-preview.png">
+        <img src="/img/DD1-removebg-preview.png" alt="duck" height="300px" length="300px">
+    </a>
+    <br>
+
+    <!--qoutation-->
+
+    <blockquote cite="google.com">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eligendi magni assumenda impedit commodi dolorem quos veniam sit saepe, non veritatis voluptatum nemo amet voluptatem iure voluptatibus magnam culpa fugit!
+    </blockquote>
+    <br>
+
+    <!--abbreviation-->
+    <p>The <abbr title="Google Browser "> Google </abbr> Browser is recommended </p>
+    <p> this Im <cite>HTML</cite> lesson commonly use </p>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+</html>
