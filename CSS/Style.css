@@ -1,4 +1,360 @@
 /*
 3 Methods of using CSS 
+Inline CSS : Directly in the HTML Element (Not Recommended). Not Recommneded 
+Internal CSS : Using <style> tags withing a single document.
+External CSS: Linking an external .css file : recommended to use
+
+sepeate : flexbox , grid , less and sass 
+
+
+Inline Element : by column 
+Block Element : by row 
+
 */
+
+body{
+    background-color: #f4f4f4;
+    color:black;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+    font-weight: normal;
+
+    line-height: 1.6em; /* is pacing per word || em : normally in mobile since lumiliit yung word pag nasa mobile its like we have default value px in html the multiply nya lang sya sample 1.5 x 1.6 */
+
+}
+
+
+/* 
+    id :use id para sa specific style  just being unique
+    class : use in globally that can be use by other means its reuseable , apply to all 
+*/
+
+#main-container {
+
+}
+
+.container{
+    width: 80%;
+    margin: auto; /* have auto left and right margin same width*/
+
+}
+
+.border-1{
+    background-color: #333333;
+    color :#f4f4f4;
+
+    border-top: 5px red solid ;
+    border-right: yellow solid;
+    border-bottom: 5px green solid;
+    border-left: 5px blue solid;
+
+}
+
+.border-2{
+    background-color: #333333;
+    color :#f4f4f4;
+
+    border-top: 5px red solid ;
+    border-right: yellow solid;
+    border-bottom: 5px green solid;
+    border-left: 5px blue solid;
+
+}
+
+
+
+/* long method  clock wise: T->R->B->L */
+.margin-1{
+    margin-top: 50px ;
+    margin-right: 20px  ;
+    margin-bottom: 25px ;
+    margin-left: 20px ;
+}
+
+/* short method : T->R->B->L*/
+.margin-2{
+    margin: 50px 200px 25px 200px;
+}
+
+.margin-3 {
+    margin: 5px 10px;
+}
+
+.padding{
+    padding: 30px;
+}
+
+/* remove the default padding and margin  */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+
+
+/* modifiying element inside of the class */
+.border-1 h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1;
+}
+
+
+/* dotted border */
+.box1{
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+
+/* slant left background */
+.box2 {
+    padding: 20px;
+    margin: 50px 200px 25px 200px;
+    background-image: repeating-linear-gradient(
+        45deg,            /* Slant angle */
+        transparent 0,    /* Transparent gap starts */
+        transparent 5px,  /* Transparent gap ends */
+        #cccccc 5px,      /* Dot color starts */
+        #cccccc 7px       /* Dot color ends */
+    );
+}
+
+
+/* slant right background */
+.box3 {
+    padding: 20px;
+    margin: 50px 200px 25px 200px;
+    background-image: repeating-linear-gradient(
+        135deg,           /* Slant angle for rightward direction */
+        transparent 0,    /* Transparent gap starts */
+        transparent 5px,  /* Transparent gap ends */
+        #cccccc 5px,      /* Dot color starts */
+        #cccccc 7px       /* Dot color ends */
+    );
+}
+
+/* start of categories */
+.categories {
+    border: 3px solid greenyellow; /* Explicitly specify 'solid' */
+    padding: 10px;
+    border-radius: 15px;
+    margin: 50px 200px 25px 200px;
+}
+
+.categories h2{
+    text-align:  center;
+    text-decoration: underline;
+}
+
+.categories a{
+    text-decoration: none;
+    color: #333333;
+}
+
+a:hover{
+    color: darkgreen;
+}
+
+a:active{
+    color: blue;
+}
+
+
+
+/* to remove the default padding and change the list style   */
+.categories ul{
+    padding:0 ;
+    list-style: none;
+    
+}
+
+.categories li {
+    padding-bottom: 2px;
+    padding-left: 50px; /* Space for the checkmark */
+    /* border-bottom: 1px dotted #333333; */
+    text-decoration: underline;
+    word-spacing: 1;
+    background-image: url('./img/DD1-removebg-preview.png'); /* Checkmark image */
+    background-repeat: no-repeat;
+    background-position: 1px center; 
+   
+}
+
+/* end categories */
+
+
+/* MyForm 
+>> Inline Element : by column 
+>> Block Element : by row 
+*/
+
+.my-form {
+    padding: 20px;
+    margin: 50px 200px 25px 200px; /* Top, Right/Left, Bottom margins */
+}
+
+.my-form .form-group {
+    padding-bottom: 15px; /* Space between form groups */
+}
+
+/* Change label to block element */
+.my-form label {
+    display: block;
+    margin-bottom: 5px; /* Add spacing between label and input field */
+}
+
+/* Input and textarea styling */
+.my-form input[type="text"],
+.my-form textarea,
+.my-form input[type="email"] {
+    padding: 9px; /* Inner spacing for inputs and textareas */
+    width: 100%; /* Full width relative to the parent container */
+    box-sizing: border-box; /* Include padding and border in the width */
+    margin-bottom: 10px; /* Add spacing below inputs for better layout */
+    border: 1px solid #cccccc; /* Add a light border */
+    border-radius: 4px; /* Smooth corners */
+    font-size: 16px; /* Better readability */
+}
+
+.btn{
+    background-color: #f6c93b;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: darkcyan;
+    color:whitesmoke;
+}
+
+/* <!-- block without margin  --> */
+.block{
+    float: left;
+    /* margin: 50px 5px 25px 5px;  */
+    width: 33.33%;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;  /* to pantay pantay yung box exclude all default margin and paddings and so on*/
+
+}
+
+/* <!-- block With margin  --> */
+.block2{
+    float: left;
+    margin: 50px 5px 25px 5px; 
+    width: 30%;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+
+}
+
+
+/* clear default margin and padding  */
+.clear-fix {
+    clear: both;
+}
+
+/* <!-- FLOAT --> */
+#main-block{
+    float: left;
+    width: 70%;
+}
+
+#sidebar{
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color:#fff;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+/*
+Positioning in CSS 
+1.STATIC : Default Positioning 
+2.RELATIVE: gumagawa sya ng sariling property hiwalay sa parent 
+3.ABSOLUTE: ito yung flexible pwede mag gawa ng Top , bottom na nag momove duns sa parent and dapat relative yung parent mo 
+4.FIXED: kahit anong gawin scroll natin sa web di sya mag babago 
+5.INITIAL: di na masyado ginagamit , kung ano yung initial position yun na yun 
+6.INHERIT: di na masyado ginagamit , kung ano position ng parent yun yung maiinhiret nya 
+
+
+*/
+
+.position-box{
+    position: relative;
+    width : 400px;
+    height: 300px;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+.position-box h1:first-of-type {
+    top: 40px;
+    left: 20px;
+    color: blue;
+    
+}
+
+.position-box h1:last-of-type {
+    top: 100px;
+    left: 20px;
+    color: red;
+}
+
+.position-box h2{
+    position: absolute;
+    top: 40px;
+    left: 1000px;
+    color: green;
+
+}
+
+.position-box2{
+    position: relative;
+    width : 400px;
+    height: 300px;
+    border: 1px solid black;
+    margin-top: 30px;
+}
+
+.position-box2 h2{
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    color: green;
+
+}
+
+.position-box2 h3{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    color: blue;
+
+}
+
+.fix-po {
+    position: fixed;
+    top  : 400;
+    color: #333;
+}
+
+
+/* for psudocode  */
+
+
 
