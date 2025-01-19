@@ -179,14 +179,14 @@ a:active{
 .categories li {
     padding-bottom: 2px;
     padding-left: 50px; /* Space for the checkmark */
-    /* border-bottom: 1px dotted #333333; */
     text-decoration: underline;
     word-spacing: 1;
-    background-image: url('./img/DD1-removebg-preview.png'); /* Checkmark image */
+    background-image: url('./img/DD3_LE_upscale_balanced_x4-removebg-preview.png'); /* Checkmark image */
     background-repeat: no-repeat;
     background-position: 1px center; 
-   
+    background-size: 30px 30px; /* Adjust the size to small (width x height) */
 }
+
 
 /* end categories */
 
@@ -354,7 +354,58 @@ Positioning in CSS
 }
 
 
-/* for psudocode  */
+/* for psudocode elements : pag tatarget ng  HTML Element */
+
+.my-list {
+    padding: 20px;
+    margin: 50px 200px 25px 200px;
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+.my-list li:first-child{ /*this is the psuedo :first-child where tatagetin nya lung pang ilan ganern*/
+    background-color: pink;
+
+}
+
+.my-list li:last-child{
+    background-color: yellowgreen;
+}
+
+.my-list li:nth-child(6){  /* sa loob declare kung pang ilan sa list as we can yung tatargetin nya yung pang 6th list*/
+    background-color: yellow;
+}
+
+.my-list2 {
+    padding: 20px;
+    margin: 50px 200px 25px 200px;
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+.my-list2 li:nth-child(even){
+    background-color: lightblue;
+}
+
+
+
+
+
+
+.position-box3 {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    margin-top: 30px;
+    background-image: url(img/dd4.png);
+    background-repeat: no-repeat;
+    background-size: contain; /* Ensures the whole image fits without cropping */
+    background-position: bottom right; /* Aligns to the lower-right corner */
+    background-color: #fee9b4; /* Fallback for gaps */
+}
+
+
 
 
 
