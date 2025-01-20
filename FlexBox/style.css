@@ -1,0 +1,138 @@
+/*
+Flexbox : CSS Flexible Box Layout, commonly known as Flexbox, is 
+a CSS3 web layout model. The flex layout allows responsive elements 
+within a container to be automatically arranged depending upon screen size 
+
+
+Kelan gagagmit ng flexbox : pag marami na yung rows and columns na sa container 
+                            pag madami ng  mga variations 
+
+flex direction: from the word flex direction  kung san lang pupunta yung element means pag row from left to right and for column Top to bottom
+
+
+*/
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+p{
+    line-height: 1.8rem;
+}
+
+.main-container{
+    padding: 20px 40px;
+    display: flex;
+}
+
+
+.main-container > div{  /* so nag lagay nito means nispecify kung anong element yung tinatarget nito, pag hinover we see nispecify nya yung div unlike pag wala ... lang and any div na yun  */
+    border: 1px solid #ccc;
+    padding: 20px 30px;
+}
+
+/* 
+as another example here 
+.maincontent > h1{
+    border: 1px solid pink;
+}
+ */
+
+ /*
+ flex : 1 : ito yung pinaka base value nya kaya nag papantay na yung laki ng flexbox pero pag niresize mo yung screen nag reresize sya and pinaka malaki yung maincontent natin 
+ pag gusto natin sya lakihan yung specific flexbox pwede natin gawin flex: 3
+ */
+
+.main-content{
+    flex: 3;
+    order: 2; /*ordering since pinaka gitna sya 2 sya its like left : 1 center : 2 right : 3 order means ordering */
+}
+
+.left-sidebar{
+    flex: 1;
+    order:1
+}
+
+.right-sidebar{
+    flex: 1;
+    order: 3;
+}
+
+.gallery-container{
+    padding:  20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* still have spacing in between 
+.gallery-container > div{
+    flex: 1;
+    margin-left: 10px;
+    background: #cecece;
+    padding: 20px 40px;
+} */
+
+/* best way to remove those spacing is */
+.gallery-container > div{
+    flex-basis: 15%;
+    margin-bottom: 1rem;
+    background: #cecece;
+    padding: 20px 40px;
+}
+
+.gallery-container2{
+    padding:  20px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery-container2 > div{
+    width: 200px;
+    height: 150px;
+    margin-bottom: 1rem;
+    background: #cecece;
+    padding: 20px 40px;
+}
+
+.complex-container{
+    padding: 20px 40px;
+    border: 1px solid #ccc;
+    display: flex;
+}
+
+.complex-container > div{
+    border: 1px solid #ccc;
+    
+}
+
+.content-1{
+    flex: 1;
+
+}
+
+.complex-rightside{
+    flex: 1;
+    display: flex; /* added flex here para maflex din natin yung mga content*/
+    flex-direction: column; /* by default naka row sya and we want it to be column */
+}
+
+.content-2{
+    background-color: pink;
+    flex: 1;
+}
+
+.content-3{
+    background-color: lightblue;
+    flex: 1;
+}
+
