@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* Image imgGallery 1 repeat(6,350px) */
+.img-gallery{
+    display: grid;
+    grid-template-columns: repeat(6,300px); /* 6 : 6 columns since we have 6 image and 350px */
+}
+
+.img-gallery img{
+    width: 100%;
+}
+
+/* Image imgGallery 3 auto-fill */
+.img-gallery2{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px); /* 6 : 6 columns since we have 6 image and 350px */
+}
+
+.img-gallery2 img{
+    width: 100%;
+}
+
+/* Image imgGallery 3 auto-fit */
+.img-gallery3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px); /* 6 : 6 columns since we have 6 image and 350px */
+}
+
+.img-gallery3 img{
+    width: 100%;
+}
+
+/* Image imgGallery 4 grid-column-gap */
+.img-gallery4{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px); /* 6 : 6 columns since we have 6 image and 350px */
+    grid-column-gap: 10px;
+}
+
+.img-gallery4 img{
+    width: 100%;
+}
+
+
+/* Image imgGallery 5 minmax  */
+.img-gallery4{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
+    grid-column-gap: 10px;
+}
+
+.img-gallery4 img{
+    width: 100%;
+}
+
+
+/*
+when to use flexbox or Grid 
+flexbox : unang lumabas , 1st approach base on content base sa laman ng data 
+Grid: container driven so nag reresize sya base sa conatiner
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

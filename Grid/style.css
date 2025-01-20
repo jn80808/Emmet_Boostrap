@@ -1,0 +1,209 @@
+/*
+>> CSS Gridlayout or CSS grid is a technique in Cascading style 
+    sheets that allows web developers to create complext responsive web design
+    layouts more easilt and consitently across browsers 
+
+>> there have been other methods for controlling web page layout methods,
+   such as tables, the box model, and CSS Flex box 
+*/
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* <!-- having overlapping --> */
+.main-container{
+    display: grid;
+    grid-template-columns: 200px 300px 200px; /* as same sa flexbox by default naka per row sya  1 row what  we do to make it column is lalagay to grid-template-columns and declare natin yung side nong per column natin left : 200 center :300 right: 200  */
+    grid-template-rows: 200px 200px; /*means 2 rows*/
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+
+/* <!-- having overlapping --> */
+.main-container2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*fr means fraction , 1fr means 1 fraction yung sasakopin nya per colomns, meand fr i-aauto-addjust nya yung per box natin depends dun sa available pa na space*/
+    grid-template-rows: 1fr 1fr;
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+
+/* <!-- ordering left center right --> */
+
+.main-container3{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+.main-content3{
+    grid-column-start: 2; /*using this we can declare san sya pwede mag start*/
+}
+
+.left-sidebar3{
+    grid-column-start: 1; 
+
+}
+
+
+.right-sidebar3{
+    grid-column-start: 3; 
+}
+
+/* <!-- fixxed the position of order --> */
+
+.main-container4{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-auto-flow: dense; /*compressing the elements in 1 column */
+
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+.main-content4{
+    grid-column-start: 2; /*using this we can declare san sya pwede mag start*/
+}
+
+.left-sidebar4{
+    grid-column-start: 1; 
+
+}
+
+
+.right-sidebar4{
+    grid-column-start: 3; 
+}
+
+
+/* <!-- Application  --> */
+
+
+
+.box-container{
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-auto-flow: dense; /*compressing the elements in 1 column */
+    padding: 20px 40px 20px;
+
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+/*not shortcut one for  grid-column-start & end  */
+/*
+.box-1{
+    background-color: greenyellow;
+    grid-column-start: 1; from grid 1 to 4 per line grid sya hindi per column so ma occupy nya nay yung buong row and and yung ibang box is automatic bababa 
+    grid-column-end: 4;
+}
+*/
+
+/*shortcut one for  grid-column-start & end instead of using this we can use grid-column*/
+.box-1{
+    background-color: greenyellow;
+    grid-column:1/4;
+}
+
+.box-2{
+    background-color: pink; 
+
+}
+
+
+.box-3{
+    background-color: lightblue;
+}
+
+/* <!-- Application2  --> */
+.box-container2{
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-auto-flow: dense; /*compressing the elements in 1 column */
+    padding: 20px 40px 20px;
+
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+
+.boxA-1{
+    background-color: lightseagreen;
+    grid-column:1/3; /*1 is Grid start and 3 end grid so from start 1 to 3*/
+}
+
+.boxB-2{
+    background-color: pink; 
+    grid-column:1/3
+}
+
+
+.boxC-3{
+    background-color: lightblue;
+    grid-column: 3; /*specify column 3 from left to right */
+    grid-row: 1/3;    /* row 1 start and end at 3 so far top to down */
+}
+
+
+
+
+/* <!-- Application2  --> */
+.box-container3{
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-auto-flow: dense; 
+    grid-template-areas: "boxAb-1 boxBb-2 boxCb-3"/*parang gagawa ng variables tas iaasinged per element or class and this area is mag babase sa columns and rows, 1st is specify natin yung columns  */
+    "boxAb-1 boxBb-2 boxCb-3"; /*and this is for rows and instead grid-column: and grid-rows yung gagagmitin na natin is grid-area */
+    padding: 20px 40px 20px;
+
+    border: 3px dotted #cccccccc;
+    padding: 20px;
+    margin:20px 0px;
+}
+
+
+.boxAb-1{
+    background-color: lightseagreen;
+    grid-area: boxAb-1;
+}
+
+.boxBb-2{
+    background-color: pink; 
+    grid-area: boxBb-2;
+}
+
+
+.boxCb-3{
+    background-color: lightblue;
+    grid-area: boxCb-3;
+}
+
+
+
